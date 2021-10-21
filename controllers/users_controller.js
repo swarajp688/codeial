@@ -9,7 +9,7 @@ module.exports.profile = function(req,res){
                     user:user
                 });
             }
-            return res.redirect('/users.sign-in')
+            return res.redirect('/users/sign-in')
         })
 
     }else
@@ -18,7 +18,7 @@ module.exports.profile = function(req,res){
     }
     
 }
-
+// sign out button
 module.exports.signOut = function(req,res){
     User.findByIdAndDelete(req.cookies.user_id,function(err,user){
         return res.redirect('/users/sign-in');
