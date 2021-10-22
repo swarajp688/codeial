@@ -1,12 +1,17 @@
+const passport = require('passport');
 const User = require('../models/user');
+const router = require('../routes');
 module.exports.profile = function(req,res){
     return res.render('users_profile',{
-        usersName:"Swaraj",
+        
         title:"profile"
     });
 }
 //render sign up page
 module.exports.signUp = function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('./users/profile')
+    };
     return res.render('user_sign_up',{
         title: "Codeial | Signup"
     })
@@ -14,6 +19,9 @@ module.exports.signUp = function(req,res){
 
 //render signin page
 module.exports.signIn = function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('./users/profile')
+    };
     return res.render('user_sign_in',{
         title: "Codeial | SignIn"
     })
