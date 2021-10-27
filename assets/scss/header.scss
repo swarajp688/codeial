@@ -1,0 +1,29 @@
+$font-size : 10px;
+$primary-color : white;
+header {
+    display: flex;
+    height: 60px ;
+    font-size: 1.3rem;
+    color: $primary-color;
+    background-color: #007BFF;
+    justify-content: space-between;
+    #site-name {
+        margin: 20px 10px;
+        a {
+            color: $primary-color ;
+            text-decoration: none;
+        }
+    }
+    ul {
+        display: flex;
+        
+        list-style: none;
+        li {
+            a {
+                color: $primary-color;
+                margin: 13px;
+                text-decoration: none;
+            }
+        }
+    }
+}

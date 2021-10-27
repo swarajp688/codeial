@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  height: 60px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #007BFF;
+  justify-content: space-between;
+}
+
+header #site-name {
+  margin: 20px 10px;
+}
+
+header #site-name a {
+  color: white;
+  text-decoration: none;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li a {
+  color: white;
+  margin: 13px;
+  text-decoration: none;
+}
